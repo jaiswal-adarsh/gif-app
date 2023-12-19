@@ -27,13 +27,16 @@ const Login = () => {
   return (
     <div>
       {/* <Home/> */}
-      <h2>Login</h2>
-      <div className='frm_main border-2 border-indigo-600'>
+      
+      <div className='frm_main border-2 border-slate-100 p-10 shadow-2xl bg-gray-100'>
+      <h2 className='login1'> User Login</h2>
       <form onSubmit={handleLogin}>
-        <label>
-          Email:
+        <label >
+          <h2 className='text-xl font-semibold'>Email:</h2>
           <input
+            className='inptfrm1 border border-slate-400 p-3'
             type="email"
+            placeholder='Username or Email'
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
@@ -41,16 +44,19 @@ const Login = () => {
         </label>
         <br />
         <label>
-          Password:
+        <h2 className='text-xl font-semibold'>Password:</h2>
           <input
+            className='inptfrm2 border border-slate-400 p-3'
             type="password"
+            placeholder='Password'
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
           />
         </label>
         <br />
-        <button type="submit">Login</button>
+        <button type="submit" className='btnfrm '>Login</button>
+        <a href="#pages/register">Register Now</a>
       </form>
       </div>
       {error && <p style={{ color: 'red' }}>{error}</p>}

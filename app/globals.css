@@ -26,9 +26,44 @@
 
 .frm_main{
   margin-top: 10%;
-  margin-left: 35%;
+  margin-left: 30%;
   height: 400px;
-  width: 400px;
+  width: 600px;
   border-radius: 30px;
 }
 
+.inptfrm1{
+  /* color: black; */
+  width: 500px;
+  height: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /* background-color: #f3f4f6; */
+  border-radius: 10px;
+  /* color: white; */
+}
+.inptfrm2{
+  color: black;
+  width: 500px;
+  height: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /* background-color: #f3f4f6; */
+  border-radius: 10px;
+  /* color: white; */
+}
+
+.btnfrm{
+  width: 100px;
+  height: 50px;
+  border: 2px solid;
+  border-radius: 30px;
+  color: orange;
+}
+
+.login1{
+  font-size: 30px;
+  font-weight: 700;
+  margin-left: 32%;
+  margin-bottom: 20px;
+}
