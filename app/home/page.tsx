@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import { searchGifs } from "./gify";
+import { searchGifs } from "../gify";
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");

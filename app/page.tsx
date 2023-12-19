@@ -1,13 +1,15 @@
 "use client";
 
 import Link from 'next/link';
-import { useState } from 'react';
-import { useRouter } from 'next/router';
-import { auth } from '../app/fb';
-// import { useRouter } from 'next/navigation';
-import Home from '../app/home'
-import Login from './login'
-import Register from './register'
+// import { useState } from 'react';
+// import { useRouter } from 'next/router';
+// import { auth } from './fb';
+// // import { useRouter } from 'next/navigation';
+// import Home from '../pages/home'
+// import Login from '../pages/login'
+import Register from './register/page'
+
+import Login from './login/page'
 
 const Pages = () => {
 
@@ -16,7 +18,8 @@ const Pages = () => {
       <Login/>
       {/* <Home/> */}
       {/* <Register/> */}
-      <Link href="/Register"><a>Dashboard</a></Link>
+      <Link href="/home">Dashboard</Link>
+      <h1>hii</h1>
     </div>
   );
 };
