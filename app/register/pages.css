@@ -1,12 +1,13 @@
-.rfrm_main{
+.rfrm_main {
   margin-top: 10%;
   margin-left: 30%;
   height: 460px;
   width: 600px;
   border-radius: 30px;
 }
-.reg1{
-    font-size: 30px;
+
+.reg1 {
+  font-size: 30px;
   font-weight: 700;
   margin-left: 23%;
   margin-bottom: 20px;

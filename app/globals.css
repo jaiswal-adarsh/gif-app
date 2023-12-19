@@ -4,27 +4,29 @@
 
 
 
-.searchbar{
+.searchbar {
   display: relative;
   margin-left: 19%;
 }
-.search{
+
+.search {
   width: 65%;
   height: 65px;
   background-color: #f3f4f6;
   border-radius: 10px;
-  
+
 }
-.btn{
+
+.btn {
   width: 90px;
   height: 65px;
   background-color: #111827;
   border-radius: 10px;
   color: white;
-  
+
 }
 
-.frm_main{
+.frm_main {
   margin-top: 10%;
   margin-left: 30%;
   height: 460px;
@@ -32,7 +34,7 @@
   border-radius: 30px;
 }
 
-.inptfrm1{
+.inptfrm1 {
   /* color: black; */
   width: 500px;
   height: 40px;
@@ -42,7 +44,8 @@
   border-radius: 10px;
   /* color: white; */
 }
-.inptfrm2{
+
+.inptfrm2 {
   color: black;
   width: 500px;
   height: 40px;
@@ -53,7 +56,7 @@
   /* color: white; */
 }
 
-.btnfrm{
+.btnfrm {
   width: 100px;
   height: 50px;
   border: 2px solid;
@@ -61,7 +64,7 @@
   color: orange;
 }
 
-.login1{
+.login1 {
   font-size: 30px;
   font-weight: 700;
   margin-left: 32%;

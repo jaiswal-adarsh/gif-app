@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useState, useRef } from "react";
 import { auth } from "../fb";
 import { useRouter } from "next/navigation";
-import { redirect } from 'next/navigation';
+import { redirect } from "next/navigation";
 import { signInWithEmailAndPassword, UserCredential } from "firebase/auth";
 
 const Login = () => {
@@ -21,7 +21,7 @@ const Login = () => {
         // Signed in
         const user = userCredential.user;
         alert("signed in successfully");
-        router.push("/home")
+        router.push("/home");
         // ...
       })
       .catch((error) => {
