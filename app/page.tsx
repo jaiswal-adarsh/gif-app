@@ -1,70 +1,27 @@
 "use client";
-// import Image from "next/image";
-// Login.js
+
+import Link from 'next/link';
 import { useState } from 'react';
-// import { useRouter } from 'next/router';
+import { useRouter } from 'next/router';
 import { auth } from '../app/fb';
-import { useRouter } from 'next/navigation';
-// import Home from '../app/pages/home'
+// import { useRouter } from 'next/navigation';
+import Home from '../app/home'
+import Login from './login'
+import Register from './register'
 
-const Login = () => {
-  const router = useRouter();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState(null);
-
-  const handleLogin = async (e) => {
-    e.preventDefault();
-
-    try {
-      await auth.signInWithEmailAndPassword(email, password);
-      router.push('/pages/home'); // Redirect to the home page or any other desired route
-    } catch (error) {
-      setError(error.message);
-    }
-  };
+const Pages = () => {
 
   return (
     <div>
+      <Login/>
       {/* <Home/> */}
-      
-      <div className='frm_main border-2 border-slate-100 p-10 shadow-2xl bg-gray-100'>
-      <h2 className='login1'> User Login</h2>
-      <form onSubmit={handleLogin}>
-        <label >
-          <h2 className='text-xl font-semibold'>Email:</h2>
-          <input
-            className='inptfrm1 border border-slate-400 p-3'
-            type="email"
-            placeholder='Username or Email'
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </label>
-        <br />
-        <label>
-        <h2 className='text-xl font-semibold'>Password:</h2>
-          <input
-            className='inptfrm2 border border-slate-400 p-3'
-            type="password"
-            placeholder='Password'
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </label>
-        <br />
-        <button type="submit" className='btnfrm '>Login</button>
-        <a href="#pages/register">Register Now</a>
-      </form>
-      </div>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+      {/* <Register/> */}
+      <Link href="/Register"><a>Dashboard</a></Link>
     </div>
   );
 };
 
-export default Login;
+export default Pages;
 
 
 
