@@ -1,6 +1,5 @@
 // Importing necessary modules and styles
 "use client";
-import Image from "next/image";
 import { useState, useEffect } from "react";
 import { searchGifs } from "../gify";
 import "../home/home.css";
@@ -14,7 +13,7 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
 
   // Async function to handle GIF search
-  const handleSearch = async (searchQuery) => {
+  const handleSearch = async () => {
     try {
       setLoading(true);
       const data = await searchGifs(searchQuery);
@@ -66,8 +65,7 @@ export default function Home() {
         <button
           type="button"
           className="btn border border-slate-400 mx-3 shadow-xl"
-          // onClick={handleSearch}
-          onClick={() => handleSearch(searchQuery)}
+          onClick={handleSearch}
         >
           Search
         </button>
