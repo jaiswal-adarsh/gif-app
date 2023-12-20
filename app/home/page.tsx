@@ -72,7 +72,7 @@ export default function Home() {
 
       <div className="grid grid-cols-4 gap-4">
 
-      <div className="disp col-span-3" style={{ display: "flex", flexWrap: "wrap" }}>
+      <div className="disp col-span-3 border border-slate-100 place-content-center shadow-xl bg-blue-50" style={{ display: "flex", flexWrap: "wrap" }}>
       
       
         {gifs.map((gif) => (
@@ -99,8 +99,8 @@ export default function Home() {
         ))}
       </div>
 
-      <div className="favbar">
-        <h2 className="font-serif font-black text-2xl text-center">Favorites</h2>
+      <div className="favbar border border-slate-100 place-content-center shadow-xl bg-green-50">
+        <h2 className="font-serif font-black text-2xl text-center mx-10">Favorites</h2>
         <div style={{ display: "flex", flexWrap: "wrap" }}>
           {favorites.map((favorite) => (
             <img

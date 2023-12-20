@@ -3,15 +3,18 @@
 } */
 
 .disp{
-    border: 2px solid;
+    /* border: 2px solid; */
     height: auto;
+    border-radius: 10px;
+    
     /* width: 65%; */
     /* display: block; */
 }
 
 .favbar{
-    border: 2px solid;
+    /* border: 2px solid; */
     height: auto;
+    border-radius: 10px;
     /* width: 25%; */
     
 }
