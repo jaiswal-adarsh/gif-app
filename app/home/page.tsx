@@ -14,10 +14,10 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
 
   // Async function to handle GIF search
-  const handleSearch = async (query) => {
+  const handleSearch = async (searchQuery) => {
     try {
       setLoading(true);
-      const data = await searchGifs(query);
+      const data = await searchGifs(searchQuery);
       setGifs(data);
     } finally {
       setLoading(false);
