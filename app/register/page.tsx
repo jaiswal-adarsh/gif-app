@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import "./pages.css";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 
+
 // Register component
 const Register = () => {
   // Next.js router hook

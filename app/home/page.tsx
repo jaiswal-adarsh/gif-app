@@ -14,10 +14,10 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
 
   // Async function to handle GIF search
-  const handleSearch = async () => {
+  const handleSearch = async (query) => {
     try {
       setLoading(true);
-      const data = await searchGifs(searchQuery);
+      const data = await searchGifs(query);
       setGifs(data);
     } finally {
       setLoading(false);
@@ -64,8 +64,10 @@ export default function Home() {
           onChange={(e) => setSearchQuery(e.target.value)}
         />
         <button
+          type="button"
           className="btn border border-slate-400 mx-3 shadow-xl"
-          onClick={handleSearch}
+          // onClick={handleSearch}
+          onClick={() => handleSearch(searchQuery)}
         >
           Search
         </button>
