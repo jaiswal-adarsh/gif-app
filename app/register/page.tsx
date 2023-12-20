@@ -1,44 +1,65 @@
+// Importing necessary modules and styles
 "use client";
-import { useState, useRef } from "react";
-import { useRouter } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 import { auth } from "../fb";
+import { useRouter } from "next/navigation";
 import "./pages.css";
-import { FirebaseError } from "firebase/app";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 
-import { createUserWithEmailAndPassword, UserCredential } from "firebase/auth";
-
+// Register component
 const Register = () => {
+  // Next.js router hook
   const router = useRouter();
+
+  // Refs for email and password inputs
   const emailRef = useRef();
   const passwordRef = useRef();
 
-  const Register = (e) => {
+  // State to manage form reset
+  const [formReset, setFormReset] = useState(false);
+
+  // Effect to reset form fields on mount
+  useEffect(() => {
+    if (formReset) {
+      emailRef.current.value = "";
+      passwordRef.current.value = "";
+      setFormReset(false);
+    }
+  }, [formReset]);
+
+  // Registration function
+  const handleRegister = (e) => {
     e.preventDefault();
 
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
 
+    // Firebase create user with email and password
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        // Signed up
+        // Successfully signed up
         const user = userCredential.user;
-        alert("SignUp Successful");
-        router.push("/login")
-        // ...
+        alert("Sign-up Successful");
+        router.push("/login");
+        // Reset the form fields after successful registration
+        setFormReset(true);
       })
       .catch((error) => {
+        // Handle registration error
         const errorCode = error.code;
         const errorMessage = error.message;
-        alert("SignUp Failed");
-        // ..
+        alert("Sign-up Failed");
       });
   };
 
+  // Render the Register component
   return (
     <div>
+      {/* Registration form */}
       <div className="rfrm_main border-2 border-slate-100 p-10 shadow-2xl bg-gray-100">
-        <h2 className="reg1">User Registeration</h2>
-        <form onSubmit={Register}>
+        <h2 className="reg1">User Registration</h2>
+        <form onSubmit={handleRegister}>
+          {/* Email input */}
           <label>
             <h2 className="text-xl font-semibold">Email:</h2>
             <input
@@ -49,6 +70,8 @@ const Register = () => {
             />
           </label>
           <br />
+
+          {/* Password input */}
           <label>
             <h2 className="text-xl font-semibold">Password:</h2>
             <input
@@ -59,12 +82,16 @@ const Register = () => {
             />
           </label>
           <br />
-          <button type="submit" className="btnfrm ">
+
+          {/* Register button */}
+          <button type="submit" className="btnfrm">
             Register
           </button>
         </form>
+
+        {/* Login link */}
         <p>
-          <br></br>
+          <br />
           Have an account? <br />
           <a
             href="/login"
@@ -74,6 +101,8 @@ const Register = () => {
             Login Now
           </a>
         </p>
+
+        {/* Optional error display */}
         {/* {error && <p style={{ color: 'red' }}>{error}</p>} */}
       </div>
     </div>
