@@ -1,0 +1,17 @@
+/* .mainfrm1{
+    display: flex;
+} */
+
+.disp{
+    border: 2px solid;
+    height: auto;
+    /* width: 65%; */
+    /* display: block; */
+}
+
+.favbar{
+    border: 2px solid;
+    height: auto;
+    /* width: 25%; */
+    
+}

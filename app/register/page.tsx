@@ -23,6 +23,7 @@ const Register = () => {
         // Signed up
         const user = userCredential.user;
         alert("SignUp Successful");
+        router.push("/login")
         // ...
       })
       .catch((error) => {

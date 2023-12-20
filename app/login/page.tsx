@@ -27,7 +27,7 @@ const Login = () => {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        alert("failed");
+        alert("failed: Invalid Credentials");
       });
   };
 

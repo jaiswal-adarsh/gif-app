@@ -10,7 +10,7 @@ export const searchGifs = async (query) => {
       params: {
         api_key: API_KEY,
         q: query,
-        limit: 10, // Adjust as needed
+        limit: 20, // Adjust as needed
       },
     });
 
