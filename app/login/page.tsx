@@ -39,7 +39,7 @@ const Login = () => {
         // Successfully signed in
         const user = userCredential.user;
         alert("Signed in successfully");
-        router.push("./home");
+        router.push("/home");
         // Reset the form fields after successful login
         setFormReset(true);
       })
@@ -93,7 +93,7 @@ const Login = () => {
           <p>
             <br />
             Don't have an account? <br />
-            <Link className="text-blue-500" href="./register">
+            <Link className="text-blue-500" href="/register">
               Register Now
             </Link>
           </p>
