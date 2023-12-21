@@ -4,9 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "homepage":"https://github.com/jaiswal-adarsh/gif-app.git"
   },
   "dependencies": {
     "axios": "^1.6.2",
@@ -23,6 +26,7 @@
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.0.4",
+    "gh-pages": "^6.1.0",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
