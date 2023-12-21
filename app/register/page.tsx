@@ -13,8 +13,8 @@ const Register = () => {
   const router = useRouter();
 
   // Refs for email and password inputs
-  const emailRef = useRef();
-  const passwordRef = useRef();
+  const emailRef = useRef<HTMLInputElement>();
+  const passwordRef = useRef<HTMLInputElement>();
 
   // State to manage form reset
   const [formReset, setFormReset] = useState(false);
