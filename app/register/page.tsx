@@ -41,7 +41,7 @@ const Register = () => {
         // Successfully signed up
         const user = userCredential.user;
         alert("Sign-up Successful");
-        router.push("/login");
+        router.push("./login");
         // Reset the form fields after successful registration
         setFormReset(true);
       })
@@ -95,9 +95,9 @@ const Register = () => {
           <br />
           Have an account? <br />
           <a
-            href="/login"
+            href="./login"
             className="text-green-500"
-            onClick={() => router.push("/login")}
+            onClick={() => router.push("./login")}
           >
             Login Now
           </a>
